@@ -1,0 +1,541 @@
+$bialy: #FFFFFF
+$jasnyszary: #CCC
+$grafit: #313332
+$czarny: #000000
+$turkus: #00C7E8
+$srebrny: #C7C7C7
+$ciemnyszary: #5D5D5B
+* 
+	box-sizing: border-box
+	margin: auto
+.szerokosc
+	width: 100%
+.srodek
+	text-align: center
+.flex 
+	display: flex
+	align-items: center
+	
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
+  
+body 
+	font-family: "OpenSans", sans-serif
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+
+.row:before,
+.row:after
+	content: ""
+	display: table
+	clear: both
+	
+header 
+	background-color: $grafit
+	height: 50px
+
+header [class*="col-"]
+	padding: 0
+ 
+nav
+	ul 
+		list-style-type: none
+		float: right
+		margin: 0	
+
+	li 
+		display: inline-block
+		padding: 0 10px
+
+	a 
+		line-height: 50px
+		padding: 0 20px
+		display: block
+		color: $bialy
+		text-decoration: none
+		text-transform: uppercase
+		&:hover	
+			color: $jasnyszary
+
+/* HERO SECTION */
+.hero 
+	@extend .szerokosc
+	height: 100vh
+	background: url("https://images.pexels.com/photos/170/apple-laptop-notebook-notes.jpg?w=1260&h=750&auto=compress&cs=tinysrgb") no-repeat
+	background-size: cover
+	background-position: center
+	background-attachment: fixed
+	@extend .flex	
+	justify-content: flex-end
+
+.slogan 
+	max-width: 100%
+	background-color: rgba(0, 0, 0, 0.3)
+	padding: 30px
+	float: right
+	
+	h1 
+		color: $bialy
+		font-size: 3rem
+		line-height: 90%
+		font-weight: 300
+		text-transform: uppercase
+		&:nth-child(2) 
+			font-weight: 700
+
+/* BENEFITS SECTION */
+.benefits 
+	margin: 50px 0
+	@extend .srodek
+
+	i.fa 
+		font-size: 90px
+		padding: 25px
+		color: $bialy
+		background-color: $grafit
+		width: 150px
+		height: 150px
+		+border-radius(20px)
+
+	a 
+		color: $czarny
+		text-decoration: none
+		text-transform: uppercase
+		&:hover,
+			color: $turkus
+		&:hover i.fa
+			background-color: $turkus
+			
+	p 
+		padding-top: 30px
+		color: $srebrny
+		
+	h3 
+		margin-top: 20px
+
+/* FEATURED SECTION */
+.featured
+	@extend .srodek
+	h1
+		font-size: 50px
+		text-transform: uppercase
+		font-weight: 500px
+		margin-bottom: 10px
+	p
+		color: $srebrny
+		padding: 30px
+
+/* GALLERY SECTION */
+.gallery [class*=col-]
+	padding: 0
+	img 
+		@extend .szerokosc
+		display: block
+		height: 200px
+		object-fit: cover
+
+.layer
+	@extend .srodek
+	position: absolute
+	width: inherit
+	height: 200px
+	line-height: 200px
+	&:hover i.fa 
+		visibility: visible
+	&:hover 
+		background-color: rgba(0,0,0, 0.5)
+
+	i.fa 
+		visibility: hidden
+		color: $czarny
+		padding: 10px
+		margin: 10px
+		font-size: 30px
+		background-color: $bialy
+		+border-radius(10px)
+
+/* TEAM SECTION */
+.team [class*=col-]
+	padding: 0
+
+.team 
+	margin: 60px auto
+	
+	img		
+		@extend .szerokosc
+		display: block
+		height: 100%
+		+border-radius(50%)
+		margin: 0
+	h2
+		@extend .srodek
+		padding: 20px
+		color: $ciemnyszary	
+		
+
+.img-container 
+	position: relative
+	height: 200px
+	width: 200px
+	margin: 0 auto
+	&:hover .function 
+		visibility: visible
+    
+.function
+	@extend .szerokosc
+	@extend .srodek
+	position: absolute
+	visibility: hidden
+	height: 100%
+	color: $bialy
+	background-color: rgba(0, 0, 0, 0.5)
+	+border-radius(50%)
+	@extend .flex
+	justify-content: center
+
+
+/* PICTURE SECTION */
+.picture [class*="col-"]
+	padding: 10px
+
+.picture 
+	@extend .szerokosc
+	max-height: 500px
+	background-color: $grafit
+	padding: 20px
+	display: block
+	overflow: hidden
+
+	p
+		color: $jasnyszary
+		text-align: left
+		padding: 0px 50px 10px 20px
+	h1 
+		text-align: left
+		text-transform: uppercase
+		color: $bialy
+		padding: 10px 0 0 30px
+		font-size: 45px
+
+	img 
+		@extend .szerokosc
+	
+/* NUMBERS SECTION */
+.figures h2
+	@extend .srodek
+	font-size: 70px
+	color: $czarny
+	font-weight: bold
+	line-height: 70px
+
+.description p
+	@extend .srodek
+	font-size: 30px
+	color: $turkus
+	text-transform: uppercase
+	font-weight: bold
+	line-height: 30px
+/* ABOUT */
+.numbers 
+	margin: 60px 0
+	
+	h1
+		font-size: 45px
+		font-weight: 900
+		font-family: 'Raleway', sans-serif
+
+	h4
+		color: $turkus
+		text-transform: uppercase
+		font-size: 16px
+		font-weight: 700
+		line-height: 16px
+	
+/* CONTACT */
+.contact
+	@extend .szerokosc
+	float: left
+	background-color: $grafit
+	color: $bialy
+	display: block
+	position: center
+	
+	p
+		text-align: left
+  
+	h3
+		text-align: left
+		padding: 35px 10px
+		font-size: 32px
+		text-transform: uppercase
+		&:after
+			padding-left: 10px
+			letter-spacing: -2px
+			content: "------------"
+			color: $bialy
+
+.social 
+	i
+		@extend .srodek
+		font-size: 30px
+		height: 50px
+		width: 50px
+		+border-radius(20%)
+	i.fa
+		color: $bialy
+		padding: 10px
+		margin: 20px 15px 0 0
+		background-color: $ciemnyszary
+		float: none
+		&:hover
+			background-color: $turkus
+			transition-duration: 0.4s
+			cursor: pointer
+			
+/* FOOTER */
+footer 
+	@extend .srodek
+	background-color: $czarny
+	color: $bialy
+	font-size: 18px
+	height: auto
+	
+/* GRID */
+[class*="col-"]
+	padding: 10px
+	float: left
+	min-height: 1px
+	
+.col-1
+	width: 8.3%
+.col-2
+	width: 16.66%
+.col-3 
+	width: 25%
+.col-4
+	width: 33.3%
+.col-5
+	width: 41.66%
+.col-6
+	width: 50%
+.col-7
+	width: 58.3%
+.col-8
+	width: 66.66%
+.col-9
+	width: 75%
+.col-10
+	width: 83.3%
+.col-11
+	width: 91.66%
+.col-12
+	@extend .szerokosc
+
+.col-offset-0
+	margin-left: 0
+.col-offset-1
+	margin-left: 8.3%
+.col-offset-2
+	margin-left: 16.66%
+.col-offset-3
+	margin-left: 25%
+.col-offset-4
+	margin-left: 33.3%
+.col-offset-5
+	margin-left: 41.66%
+.col-offset-6
+	margin-left: 50%
+.col-offset-7
+	margin-left: 58.3%
+.col-offset-8
+	margin-left: 66.66%
+.col-offset-9
+	margin-left: 75%
+.col-offset-10
+	margin-left: 83.3%
+.col-offset-11
+	margin-left: 91.66%
+.col-offset-12
+	margin-left: 100%
+
+/* RWD */
+/* FOR TABLET */
+@media (min-width: 768px) and (max-width: 1199px)
+	.col-m-1
+		width: 8.3%
+	.col-m-2
+		width: 16.66%
+	.col-m-3
+		width: 25%
+	.col-m-4
+		width: 33.3%
+	.col-m-5
+		width: 41.66%
+	.col-m-6
+		width: 50%
+	.col-m-7
+		width: 58.3%
+	.col-m-8
+		width: 66.66%
+	.col-m-9
+		width: 75%
+	.col-m-10
+		width: 83.3%
+	.col-m-11
+		width: 91.66%
+	.col-m-12
+		width: 100%
+		
+	.layer
+		i.fa 
+			margin: 0			
+	/* CONTACT */
+	.contact 
+		h3
+			text-align: center
+			padding: 10px
+			font-size: 20px
+			&:after
+				content: "-------"
+				padding-left: 10px
+				letter-spacing: -2px
+			&:before
+				content: "-------"
+				padding-right: 10px
+				letter-spacing: -2px
+		p, h4
+			text-align: center
+			font-size: 90%
+		
+	.social
+		margin: auto
+		text-align: center
+	
+		
+/* FOR SMALLEST DEVICE */
+@media (max-width: 767px)
+	.col-s-1
+		width: 8.3%
+	.col-s-2
+		width: 16.66%
+	.col-s-3
+		width: 25%
+	.col-s-4
+		width: 33.3%
+	.col-s-5
+		width: 41.66%
+	.col-s-6
+		width: 50%
+	.col-s-7
+		width: 58.3%
+	.col-s-8
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10
+		width: 83.3%
+	.col-s-11
+		width: 91.66%
+	.col-s-12
+		width: 100%
+	
+	/* NAVIGATION */
+	header
+		text-align: center
+		height: auto
+		ul
+			list-style-type: none
+			float: none
+			padding: 0
+	
+		li
+			display: block
+	
+		a	
+			padding: 0
+			display: block
+		img
+			float: left
+			width: 100%
+	
+	/* HERO */
+	.slogan h1
+		color: $bialy
+		font-size: 1.5rem
+		font-weight: 300
+		text-transform: uppercase
+	/* FEATURED */
+	.featured 
+		h1
+			font-size: 30px
+			text-transform: uppercase
+			font-weight: 500px
+			margin-bottom: 10px
+		p
+			color: $srebrny
+			padding: 10px
+	
+	/* GALLERY */
+	.layer i.fa
+		visibility: visible
+	
+	/* TEAM */
+	.function h3
+		visibility: visible
+	
+	/* PICTURE */
+	.picture 
+		width: 100%
+		height: 100%
+		overflow: visible
+		max-height: 100%
+		padding: 0
+		text-align: center
+		
+		img 
+			width: 25%
+	
+		h1
+			text-align: center
+			padding: 5px
+			font-size: 30px
+	
+		p
+			text-align: center
+			padding: 5px
+			font-size: 90%
+	
+	/* NUMBERS */
+	.figures h2
+		font-size: 50px
+	
+	.description p
+		font-size: 20px
+	
+	/* CONTACT */
+	.contact 
+		h3
+			text-align: center
+			padding: 10px
+			font-size: 25px
+			&:after
+				content: "-------"
+				padding-left: 10px
+				letter-spacing: -2px	
+			&:before
+				content: "-------"
+				padding-right: 10px
+				letter-spacing: -2px
+		p
+			text-align: center
+	
+		h4
+			text-align: right
+	.social
+		margin: auto
+		text-align: center

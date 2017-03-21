@@ -1,0 +1,513 @@
+* {
+  box-sizing: border-box;
+  margin: auto; }
+
+.szerokosc, .hero, .gallery [class*=col-] img, .team img, .function, .picture, .picture img, .contact, .col-12 {
+  width: 100%; }
+
+.srodek, .benefits, .featured, .layer, .team h2, .function, .figures h2, .description p, .social i, footer {
+  text-align: center; }
+
+.flex, .hero, .function {
+  display: flex;
+  align-items: center; }
+
+body {
+  font-family: "OpenSans", sans-serif; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+header {
+  background-color: #313332;
+  height: 50px; }
+
+header [class*="col-"] {
+  padding: 0; }
+
+nav ul {
+  list-style-type: none;
+  float: right;
+  margin: 0; }
+
+nav li {
+  display: inline-block;
+  padding: 0 10px; }
+
+nav a {
+  line-height: 50px;
+  padding: 0 20px;
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase; }
+  nav a:hover {
+    color: #CCC; }
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/170/apple-laptop-notebook-notes.jpg?w=1260&h=750&auto=compress&cs=tinysrgb") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: flex-end; }
+
+.slogan {
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  float: right; }
+  .slogan h1 {
+    color: #FFFFFF;
+    font-size: 3rem;
+    line-height: 90%;
+    font-weight: 300;
+    text-transform: uppercase; }
+    .slogan h1:nth-child(2) {
+      font-weight: 700; }
+
+/* BENEFITS SECTION */
+.benefits {
+  margin: 50px 0; }
+  .benefits i.fa {
+    font-size: 90px;
+    padding: 25px;
+    color: #FFFFFF;
+    background-color: #313332;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px; }
+  .benefits a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .benefits a:hover {
+      color: #00C7E8; }
+    .benefits a:hover i.fa {
+      background-color: #00C7E8; }
+  .benefits p {
+    padding-top: 30px;
+    color: #C7C7C7; }
+  .benefits h3 {
+    margin-top: 20px; }
+
+/* FEATURED SECTION */
+.featured h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 500px;
+  margin-bottom: 10px; }
+
+.featured p {
+  color: #C7C7C7;
+  padding: 30px; }
+
+/* GALLERY SECTION */
+.gallery [class*=col-] {
+  padding: 0; }
+  .gallery [class*=col-] img {
+    display: block;
+    height: 200px;
+    object-fit: cover; }
+
+.layer {
+  position: absolute;
+  width: inherit;
+  height: 200px;
+  line-height: 200px; }
+  .layer:hover i.fa {
+    visibility: visible; }
+  .layer:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .layer i.fa {
+    visibility: hidden;
+    color: #000000;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px; }
+
+/* TEAM SECTION */
+.team [class*=col-] {
+  padding: 0; }
+
+.team {
+  margin: 60px auto; }
+  .team img {
+    display: block;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0; }
+  .team h2 {
+    padding: 20px;
+    color: #5D5D5B; }
+
+.img-container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto; }
+  .img-container:hover .function {
+    visibility: visible; }
+
+.function {
+  position: absolute;
+  visibility: hidden;
+  height: 100%;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  justify-content: center; }
+
+/* PICTURE SECTION */
+.picture [class*="col-"] {
+  padding: 10px; }
+
+.picture {
+  max-height: 500px;
+  background-color: #313332;
+  padding: 20px;
+  display: block;
+  overflow: hidden; }
+  .picture p {
+    color: #CCC;
+    text-align: left;
+    padding: 0px 50px 10px 20px; }
+  .picture h1 {
+    text-align: left;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px 0 0 30px;
+    font-size: 45px; }
+
+/* NUMBERS SECTION */
+.figures h2 {
+  font-size: 70px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 70px; }
+
+.description p {
+  font-size: 30px;
+  color: #00C7E8;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 30px; }
+
+/* ABOUT */
+.numbers {
+  margin: 60px 0; }
+  .numbers h1 {
+    font-size: 45px;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif; }
+  .numbers h4 {
+    color: #00C7E8;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px; }
+
+/* CONTACT */
+.contact {
+  float: left;
+  background-color: #313332;
+  color: #FFFFFF;
+  display: block;
+  position: center; }
+  .contact p {
+    text-align: left; }
+  .contact h3 {
+    text-align: left;
+    padding: 35px 10px;
+    font-size: 32px;
+    text-transform: uppercase; }
+    .contact h3:after {
+      padding-left: 10px;
+      letter-spacing: -2px;
+      content: "------------";
+      color: #FFFFFF; }
+
+.social i {
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  border-radius: 20%; }
+
+.social i.fa {
+  color: #FFFFFF;
+  padding: 10px;
+  margin: 20px 15px 0 0;
+  background-color: #5D5D5B;
+  float: none; }
+  .social i.fa:hover {
+    background-color: #00C7E8;
+    transition-duration: 0.4s;
+    cursor: pointer; }
+
+/* FOOTER */
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 18px;
+  height: auto; }
+
+/* GRID */
+[class*="col-"] {
+  padding: 10px;
+  float: left;
+  min-height: 1px; }
+
+.col-1 {
+  width: 8.3%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.3%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.3%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.3%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-offset-0 {
+  margin-left: 0; }
+
+.col-offset-1 {
+  margin-left: 8.3%; }
+
+.col-offset-2 {
+  margin-left: 16.66%; }
+
+.col-offset-3 {
+  margin-left: 25%; }
+
+.col-offset-4 {
+  margin-left: 33.3%; }
+
+.col-offset-5 {
+  margin-left: 41.66%; }
+
+.col-offset-6 {
+  margin-left: 50%; }
+
+.col-offset-7 {
+  margin-left: 58.3%; }
+
+.col-offset-8 {
+  margin-left: 66.66%; }
+
+.col-offset-9 {
+  margin-left: 75%; }
+
+.col-offset-10 {
+  margin-left: 83.3%; }
+
+.col-offset-11 {
+  margin-left: 91.66%; }
+
+.col-offset-12 {
+  margin-left: 100%; }
+
+/* RWD */
+/* FOR TABLET */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .col-m-1 {
+    width: 8.3%; }
+  .col-m-2 {
+    width: 16.66%; }
+  .col-m-3 {
+    width: 25%; }
+  .col-m-4 {
+    width: 33.3%; }
+  .col-m-5 {
+    width: 41.66%; }
+  .col-m-6 {
+    width: 50%; }
+  .col-m-7 {
+    width: 58.3%; }
+  .col-m-8 {
+    width: 66.66%; }
+  .col-m-9 {
+    width: 75%; }
+  .col-m-10 {
+    width: 83.3%; }
+  .col-m-11 {
+    width: 91.66%; }
+  .col-m-12 {
+    width: 100%; }
+  .layer i.fa {
+    margin: 0; }
+  /* CONTACT */
+  .contact h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px; }
+    .contact h3:after {
+      content: "-------";
+      padding-left: 10px;
+      letter-spacing: -2px; }
+    .contact h3:before {
+      content: "-------";
+      padding-right: 10px;
+      letter-spacing: -2px; }
+  .contact p, .contact h4 {
+    text-align: center;
+    font-size: 90%; }
+  .social {
+    margin: auto;
+    text-align: center; } }
+
+/* FOR SMALLEST DEVICE */
+@media (max-width: 767px) {
+  .col-s-1 {
+    width: 8.3%; }
+  .col-s-2 {
+    width: 16.66%; }
+  .col-s-3 {
+    width: 25%; }
+  .col-s-4 {
+    width: 33.3%; }
+  .col-s-5 {
+    width: 41.66%; }
+  .col-s-6 {
+    width: 50%; }
+  .col-s-7 {
+    width: 58.3%; }
+  .col-s-8 {
+    width: 66.66%; }
+  .col-s-9 {
+    width: 75%; }
+  .col-s-10 {
+    width: 83.3%; }
+  .col-s-11 {
+    width: 91.66%; }
+  .col-s-12 {
+    width: 100%; }
+  /* NAVIGATION */
+  header {
+    text-align: center;
+    height: auto; }
+    header ul {
+      list-style-type: none;
+      float: none;
+      padding: 0; }
+    header li {
+      display: block; }
+    header a {
+      padding: 0;
+      display: block; }
+    header img {
+      float: left;
+      width: 100%; }
+  /* HERO */
+  .slogan h1 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+  /* FEATURED */
+  .featured h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500px;
+    margin-bottom: 10px; }
+  .featured p {
+    color: #C7C7C7;
+    padding: 10px; }
+  /* GALLERY */
+  .layer i.fa {
+    visibility: visible; }
+  /* TEAM */
+  .function h3 {
+    visibility: visible; }
+  /* PICTURE */
+  .picture {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    max-height: 100%;
+    padding: 0;
+    text-align: center; }
+    .picture img {
+      width: 25%; }
+    .picture h1 {
+      text-align: center;
+      padding: 5px;
+      font-size: 30px; }
+    .picture p {
+      text-align: center;
+      padding: 5px;
+      font-size: 90%; }
+  /* NUMBERS */
+  .figures h2 {
+    font-size: 50px; }
+  .description p {
+    font-size: 20px; }
+  /* CONTACT */
+  .contact h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px; }
+    .contact h3:after {
+      content: "-------";
+      padding-left: 10px;
+      letter-spacing: -2px; }
+    .contact h3:before {
+      content: "-------";
+      padding-right: 10px;
+      letter-spacing: -2px; }
+  .contact p {
+    text-align: center; }
+  .contact h4 {
+    text-align: right; }
+  .social {
+    margin: auto;
+    text-align: center; } }
+
+/*# sourceMappingURL=style.css.map */
